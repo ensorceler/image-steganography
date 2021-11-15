@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css"></link>
+    <script defer src="main.js"></script>   
+    <title>Document</title>
+  </head>
+  <body>
+    <h1> Image Steganography Tool</h1> 
+    <p>Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination</p> 
+    <p >
+       <strong>Here you can encode a secret message to the uploaded image</strong>
+    </p> 
+    <div class="encoding_area">
+    
+      <label>Input Message: </label>
+      <input type="text" id="message"/>
+      <p id="input-warning">if you don't give any input before uploading the image, "Hello,World!" message will be encoded as default</p>
+      <p id="input-warning" >use an image with lossless format (png,bitmap)</p>
+      <br/>
+      <input type="file" id="image-upload" name="image-upload"/>
+      <br/>  
+      <canvas id="imageCanvas"></canvas>
+
+    </div>
+    
+    <p >
+       <strong>Here you can decode a secret message to the uploaded image</strong>
+    </p> 
+    <div class="decoding_area">
+      <label>Image decoder</label> 
+      <input type="file" id="image-decode" name="image-decode"/>
+      <canvas id="decodeCanvas" ></canvas> 
+      <h3 id="decoded_message"></h3>
+    </div>
+   
+   
+
+  </body>
+</html>
