@@ -64,11 +64,8 @@ function handleImage(e) {
         // encoding the data in the last one bit of the red
         let x = imgData.data[i].toString(2);
         let y = messageBinary[j];
-        console.log("change x to y", x, y);
-        new_x = x.slice(0, -1) + y;
-        console.log("result is :", new_x);
+        new_x = x.slice(0, -1) + y; // changing the last bit of the image
         let z = parseInt(new_x, 2);
-        console.log("result number is :", z);
         imgData.data[i] = z;
       }
 
